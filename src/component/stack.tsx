@@ -6,9 +6,19 @@ interface iTechtype {
   // techDataPromis: Promise<ITechDatatype[]>;
   tectItem: ITechDatatype[];
   setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
+
 }
 
-const Stack = ({ tectItem }: iTechtype) => {
+const Stack = ({ tectItem, setTechItem
+ }: iTechtype) => {
+  const hendelClick = (item: ITechDatatype) => {
+    const removeItem = tectItem.filter(items => items.id !== item.id);
+
+    setTechItem(removeItem);
+  };
+  const handleRemoveAll = () => {
+    setTechItem([]);
+  };
   return (
     <div>
       <div className="card bg-base-100 w-75 shadow-sm p-5">
@@ -35,14 +45,23 @@ const Stack = ({ tectItem }: iTechtype) => {
                         </span>
                       </div>
                     </div>
-                    <IoIosClose className=" text-5xl cursor-pointer" />
+                    <IoIosClose
+                      className=" text-5xl cursor-pointer"
+                      onClick={() => hendelClick(item)}
+                    />
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className={`btn mt-5 border-red-400 text-red-500 font-bold text-[1rem] bg-white `}> Remove All</div>
+        <div
+          className={`btn mt-5 border-red-400 text-red-500 font-bold text-[1rem] bg-white `}
+          onClick={handleRemoveAll}
+        >
+          {" "}
+          Remove All
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,11 @@ interface iTechtype {
   setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
 }
 
-const Technologies = ({ techDataPromis, tectItem, setTechItem }: iTechtype) => {
+const Technologies = ({
+  techDataPromis,
+  tectItem,
+  setTechItem,
+}: iTechtype) => {
   const dataTech = use(techDataPromis);
   console.log(dataTech);
   return (
@@ -27,7 +31,7 @@ const Technologies = ({ techDataPromis, tectItem, setTechItem }: iTechtype) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 mt-15 border">
+        <div className="grid grid-cols-12 mt-15">
           <div className="col-span-9 grid grid-cols-3 gap-y-4  ">
             {dataTech.map(item => {
               return (
@@ -36,13 +40,18 @@ const Technologies = ({ techDataPromis, tectItem, setTechItem }: iTechtype) => {
                     technologiesItem={item}
                     tectItem={tectItem}
                     setTechItem={setTechItem}
+
                   ></TechnologiesCard>
                 </div>
               );
             })}
           </div>
           <div className=" col-span-3">
-            <Stack tectItem={tectItem} setTechItem={setTechItem}></Stack>
+            <Stack
+              tectItem={tectItem}
+              setTechItem={setTechItem}
+
+            ></Stack>
           </div>
         </div>
       </div>

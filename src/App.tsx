@@ -18,6 +18,7 @@ function App() {
 
   const [tectItem,setTechItem]=useState<ITechDatatype[]>([])
 
+
   return (
     <>
       <Suspense

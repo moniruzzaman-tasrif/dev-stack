@@ -9,21 +9,22 @@ interface CardDatatype {
   technologiesItem: ITechDatatype;
   tectItem: ITechDatatype[];
   setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
+
 }
 
 const TechnologiesCard = ({
   technologiesItem,
   tectItem,
   setTechItem,
+
 }: CardDatatype) => {
-
-const [cardStack, setCardStack] = useState(false);
-
+    const [cardStack, setCardStack] = useState(false);
   const hendelClick = () => {
-setCardStack(true);
-setTechItem([...tectItem, technologiesItem]);
+    setTechItem([...tectItem, technologiesItem]);
 
+    setCardStack(true);
   };
+
   return (
     <div>
       {
