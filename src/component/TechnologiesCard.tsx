@@ -1,7 +1,8 @@
 
-import { useState, type Dispatch, type SetStateAction } from 'react';
+import { type Dispatch, type SetStateAction } from 'react';
 import type { ITechDatatype } from './dataType';
 import { FaStar } from 'react-icons/fa';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 
 
@@ -18,11 +19,24 @@ const TechnologiesCard = ({
   setTechItem,
 
 }: CardDatatype) => {
-    const [cardStack, setCardStack] = useState(false);
+    const Isverify = tectItem.some(item => item.id === technologiesItem.id);
   const hendelClick = () => {
-    setTechItem([...tectItem, technologiesItem]);
+  if(!Isverify){
+      setTechItem([...tectItem, technologiesItem]);
+      toast.success("🦄 Wow so easy!", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+  }
 
-    setCardStack(true);
+
   };
 
   return (
@@ -63,10 +77,11 @@ const TechnologiesCard = ({
           </div>
           <button
             onClick={hendelClick}
-            disabled={cardStack}
+            disabled={Isverify}
             className={`btn btn-neutral `}
           >
-            {cardStack === true ? "added to stack" : "add to stack"}
+            <ToastContainer />
+            {Isverify === true ? "added to stack" : "add to stack"}
           </button>
         </div>
       }
