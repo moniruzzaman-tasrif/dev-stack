@@ -8,7 +8,7 @@ interface iTechtype {
   setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
 }
 
-const Stack = ({ tectItem, setTechItem }: iTechtype) => {
+const Stack = ({ tectItem }: iTechtype) => {
   return (
     <div>
       <div className="card bg-base-100 w-75 shadow-sm p-5">
