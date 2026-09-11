@@ -1,12 +1,15 @@
-import { use } from "react";
+import { use, type Dispatch, type SetStateAction } from "react";
 import type { ITechDatatype } from "./dataType";
 import TechnologiesCard from "./TechnologiesCard";
+import Stack from "./stack";
 
-interface iTechtype{
-  techDataPromis:Promise<ITechDatatype[]>
+interface iTechtype {
+  techDataPromis: Promise<ITechDatatype[]>;
+  tectItem: ITechDatatype[];
+  setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
 }
 
-const Technologies = ({ techDataPromis }: iTechtype) => {
+const Technologies = ({ techDataPromis, tectItem, setTechItem }: iTechtype) => {
   const dataTech = use(techDataPromis);
   console.log(dataTech);
   return (
@@ -24,17 +27,23 @@ const Technologies = ({ techDataPromis }: iTechtype) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 mt-15">
+        <div className="grid grid-cols-12 mt-15 border">
           <div className="col-span-9 grid grid-cols-3 gap-y-4  ">
             {dataTech.map(item => {
               return (
                 <div className="">
-                  <TechnologiesCard technologiesItem={item}></TechnologiesCard>
+                  <TechnologiesCard
+                    technologiesItem={item}
+                    tectItem={tectItem}
+                    setTechItem={setTechItem}
+                  ></TechnologiesCard>
                 </div>
               );
             })}
           </div>
-          <div className=" col-span-3"> </div>
+          <div className=" col-span-3">
+            <Stack tectItem={tectItem} setTechItem={setTechItem}></Stack>
+          </div>
         </div>
       </div>
     </div>

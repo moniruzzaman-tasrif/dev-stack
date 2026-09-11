@@ -1,12 +1,29 @@
-import React from 'react';
+
+import { useState, type Dispatch, type SetStateAction } from 'react';
 import type { ITechDatatype } from './dataType';
 import { FaStar } from 'react-icons/fa';
 
+
+
 interface CardDatatype {
   technologiesItem: ITechDatatype;
+  tectItem: ITechDatatype[];
+  setTechItem: Dispatch<SetStateAction<ITechDatatype[]>>;
 }
 
-const TechnologiesCard = ({ technologiesItem }: CardDatatype) => {
+const TechnologiesCard = ({
+  technologiesItem,
+  tectItem,
+  setTechItem,
+}: CardDatatype) => {
+
+const [cardStack, setCardStack] = useState(false);
+
+  const hendelClick = () => {
+setCardStack(true);
+setTechItem([...tectItem, technologiesItem]);
+
+  };
   return (
     <div>
       {
@@ -43,7 +60,13 @@ const TechnologiesCard = ({ technologiesItem }: CardDatatype) => {
               {technologiesItem.rating}
             </span>
           </div>
-          <button className="btn btn-neutral"> Add to Stack</button>
+          <button
+            onClick={hendelClick}
+            disabled={cardStack}
+            className={`btn btn-neutral `}
+          >
+            {cardStack === true ? "added to stack" : "add to stack"}
+          </button>
         </div>
       }
     </div>

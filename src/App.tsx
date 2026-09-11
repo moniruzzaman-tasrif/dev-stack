@@ -1,6 +1,6 @@
 
 
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banar from "./component/Banar";
 import Nav from "./component/Nav";
@@ -15,6 +15,9 @@ const dataPrimis = async (): Promise<ITechDatatype[]> => {
 };
 
 function App() {
+
+  const [tectItem,setTechItem]=useState<ITechDatatype[]>([])
+
   return (
     <>
       <Suspense
@@ -29,7 +32,11 @@ function App() {
       >
         <Nav></Nav>
         <Banar></Banar>
-        <Technologies techDataPromis={dataPrimis()}></Technologies>
+        <Technologies
+          techDataPromis={dataPrimis()}
+          tectItem={tectItem}
+          setTechItem={setTechItem}
+        ></Technologies>
       </Suspense>
     </>
   );
