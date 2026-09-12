@@ -4,7 +4,6 @@ import { Suspense, useState } from "react";
 import "./App.css";
 import Banar from "./component/Banar";
 import Nav from "./component/Nav";
-import myVideo from "./assets/loading.webm"
 import Technologies from "./component/Technologies";
 import type { ITechDatatype } from "./component/dataType";
 import Footer from "./component/footer";
