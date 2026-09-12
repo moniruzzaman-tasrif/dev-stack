@@ -7,6 +7,7 @@ import Nav from "./component/Nav";
 import myVideo from "./assets/loading.webm"
 import Technologies from "./component/Technologies";
 import type { ITechDatatype } from "./component/dataType";
+import Footer from "./component/footer";
 
 const dataPrimis = async (): Promise<ITechDatatype[]> => {
   const res = await fetch("/public/technologies.json");
@@ -38,6 +39,7 @@ function App() {
           tectItem={tectItem}
           setTechItem={setTechItem}
         ></Technologies>
+        <Footer></Footer>
       </Suspense>
     </>
   );

@@ -25,7 +25,7 @@ const TechnologiesCard = ({
       setTechItem([...tectItem, technologiesItem]);
       toast.success("🦄 Wow so easy!", {
         position: "bottom-center",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
@@ -49,7 +49,7 @@ const TechnologiesCard = ({
               src={technologiesItem.icon}
               alt={technologiesItem.name}
             />
-            <h2 className="px-3 py-1 rounded-2xl text-white text-[0.7rem] bg-linear-to-r from-[#FD5426] to-[#EC4995]">
+            <h2 className="px-3 py-1 rounded-2xl text-white text-[0.7rem] bg-linear-to-r from-[#fd5526] to-[#ec4995]">
               {technologiesItem.badge}
             </h2>
           </div>
@@ -71,7 +71,7 @@ const TechnologiesCard = ({
               {technologiesItem.difficulty}
             </span>
             <span className="text-[15px] text-gray-600 flex items-center gap-1">
-              <FaStar />
+              <FaStar className='text-yellow-500' />
               {technologiesItem.rating}
             </span>
           </div>
