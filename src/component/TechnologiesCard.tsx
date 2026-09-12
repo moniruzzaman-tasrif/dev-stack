@@ -71,14 +71,14 @@ const TechnologiesCard = ({
               {technologiesItem.difficulty}
             </span>
             <span className="text-[15px] text-gray-600 flex items-center gap-1">
-              <FaStar className='text-yellow-500' />
+              <FaStar className="text-yellow-500" />
               {technologiesItem.rating}
             </span>
           </div>
           <button
             onClick={hendelClick}
             disabled={Isverify}
-            className={`btn btn-neutral `}
+            className={`btn btn-neutral disabled:border-2 disabled:border-red-300 disabled:text-[#EC4993] `}
           >
             <ToastContainer />
             {Isverify === true ? "added to stack" : "add to stack"}

@@ -33,18 +33,17 @@ const Stack = ({ tectItem, setTechItem
 
       setTechItem([]);
 
-      toast.error(" All Stack Deleted ", {
-        position: "bottom-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
-
+   toast.error(" Delete Stack !", {
+     position: "bottom-right",
+     autoClose: 5000,
+     hideProgressBar: false,
+     closeOnClick: false,
+     pauseOnHover: true,
+     draggable: true,
+     progress: undefined,
+     theme: "light",
+     transition: Bounce,
+   });
 
   };
   return (
@@ -52,7 +51,11 @@ const Stack = ({ tectItem, setTechItem
       <div className="card bg-base-100 w-75 shadow-sm p-5">
         <div className="">
           <h1 className="capitalize font-bold text-2xl">your card</h1>
-          <p className=" text-gray-500">No technologies selected yet.</p>
+          <p className=" text-gray-500 capitalize">
+            {tectItem.length === 0
+              ? "No technologies selected yet."
+              : ` ${tectItem.length} technologies selected yet. `}
+          </p>
         </div>
         <div className=" mt-5">
           {tectItem.length === 0 ? (
@@ -67,8 +70,8 @@ const Stack = ({ tectItem, setTechItem
                     key={item.id}
                     className=" card bg-base-100 w-65 shadow-sm py-2 mt-4"
                   >
-                    <div className="flex justify-between items-center px-2">
-                      <div className="flex gap-4 items-center">
+                    <div className="flex justify-between w-full items-center px-2">
+                      <div className="flex gap-4 items-center justify-between">
                         <img className="h-9" src={item.icon} alt="" />
                         <div className="">
                           <h2 className=" font-bold text-[0.9rem]">
@@ -80,10 +83,13 @@ const Stack = ({ tectItem, setTechItem
                           </span>
                         </div>
                       </div>
-                      <IoIosClose
-                        className=" text-5xl cursor-pointer"
-                        onClick={() => hendelClick(item)}
-                      />
+                      <div className="">
+                        <IoIosClose
+                          className=" text-4xl text-gray-500 cursor-pointer h hover:bg-[#f9711674] hover:rounded-3xl hover:text-white transition duration-100 ease-in "
+                          onClick={() => hendelClick(item)}
+                        />
+                        <ToastContainer />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -94,14 +100,14 @@ const Stack = ({ tectItem, setTechItem
         {tectItem.length === 0 ? (
           ""
         ) : (
-          <div
-            className={`btn mt-5 border-red-400 text-red-500 font-bold text-[1rem] bg-white `}
+          <button
+            className={`btn mt-5 border-red-400 text-red-400 font-bold text-[1rem] bg-white hover:bg-red-400 hover:text-white `}
             onClick={handleRemoveAll}
           >
             {" "}
             <ToastContainer />
             Remove All
-          </div>
+          </button>
         )}
       </div>
     </div>
