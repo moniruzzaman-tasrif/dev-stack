@@ -26,7 +26,7 @@ const Technologies = ({
               Technologies
             </span>
           </h1>
-          <p className="mt-5">
+          <p className="mt-5 text-gray-500">
             Pick one technology per category to build your ideal stack.
           </p>
         </div>
@@ -40,18 +40,13 @@ const Technologies = ({
                     technologiesItem={item}
                     tectItem={tectItem}
                     setTechItem={setTechItem}
-
                   ></TechnologiesCard>
                 </div>
               );
             })}
           </div>
           <div className=" col-span-3">
-            <Stack
-              tectItem={tectItem}
-              setTechItem={setTechItem}
-
-            ></Stack>
+            <Stack tectItem={tectItem} setTechItem={setTechItem}></Stack>
           </div>
         </div>
       </div>

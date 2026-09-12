@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <div className=" max-w-300 mx-auto mt-25">
-        <div className=" grid grid-cols-12  gap-4 ">
+        <div className=" grid grid-cols-12  gap-4">
           <div className="col-span-5 ">
             <img src={LogoImg} className="" alt="" />
             <p className="text-gray-500 py-4 pr-8">
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase  text-[0.9rem]"> product</h1>
-            <ul className=" text-gray-500 flex flex-col gap-2 ">
+            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem] ">
               <li>
                 <a href="/">Home</a>
               </li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase  text-[0.9rem]">company</h1>
-            <ul className=" text-gray-500 flex flex-col gap-2 ">
+            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem]">
               <li>
                 <a href="/">about</a>
               </li>
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase text-[0.9rem]">legal</h1>
-            <ul className="text-gray-500 flex flex-col gap-2 ">
+            <ul className="text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem]">
               <li>
                 <a href="/"> privacy policy</a>
               </li>
@@ -58,11 +58,11 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className=" flex justify-between mt-8 py-5">
-          <span className="text-gray-500">
+        <div className=" flex justify-between items-center mt-8 py-5">
+          <span className="text-gray-500 text-[0.9rem]">
             © 2026 Dev Stack. All rights reserved.
           </span>
-          <div className=" text-gray-500 flex gap-3">
+          <div className=" text-gray-500 flex gap-3  text-[0.9rem]">
             <span>Privacy</span>
             <span>Terms</span>
           </div>

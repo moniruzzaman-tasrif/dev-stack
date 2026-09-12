@@ -2,7 +2,7 @@
 import { type Dispatch, type SetStateAction } from 'react';
 import type { ITechDatatype } from './dataType';
 import { FaStar } from 'react-icons/fa';
-import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast } from 'react-toastify';
 
 
 
@@ -54,23 +54,23 @@ const TechnologiesCard = ({
             </h2>
           </div>
           <div className=" ">
-            <h1 className="font-bold text-1.4xl my-2">
+            <h1 className="font-bold text-[1.4rem] my-2">
               {technologiesItem.name}
             </h1>
-            <p className="text-gray-600 text-left">
+            <p className="text-gray-600 text-left text-[0.9rem]">
               {" "}
               {technologiesItem.description}
             </p>
           </div>
           <div className="divider m-0"></div>
           <div className=" flex justify-between items-center ">
-            <span className=" bg-gray-100 px-2 py-1 rounded-[5px] text-[15px] text-gray-600">
+            <span className=" bg-gray-50 border border-gray-100 px-2 py-1 rounded-[5px] text-[0.8rem] text-gray-500">
               {technologiesItem.category}
             </span>
-            <span className="text-[15px] text-gray-600">
+            <span className="text-[0.8rem] text-gray-600">
               {technologiesItem.difficulty}
             </span>
-            <span className="text-[15px] text-gray-600 flex items-center gap-1">
+            <span className="text-[0.9rem] text-gray-600 flex items-center gap-1">
               <FaStar className="text-yellow-500" />
               {technologiesItem.rating}
             </span>
@@ -80,8 +80,8 @@ const TechnologiesCard = ({
             disabled={Isverify}
             className={`btn btn-neutral disabled:border-2 disabled:border-red-300 disabled:text-[#EC4993] `}
           >
-            <ToastContainer />
-            {Isverify === true ? "added to stack" : "add to stack"}
+
+            {Isverify === true ? "Added to Stack" : "Add to Stack"}
           </button>
         </div>
       }

@@ -5,7 +5,7 @@ const Nav = () => {
     <div className="border border-gray-300">
       <div className=" flex justify-between items-center max-w-300 mx-auto py-4">
         <img src={Logo} alt="" />
-        <ul className="flex gap-8 ">
+        <ul className="flex gap-8 text-gray-500 ">
           <li className="hover:text-[#D91B7E]">
             <a href="/">Home</a>
           </li>
@@ -23,7 +23,7 @@ const Nav = () => {
           </li>
         </ul>
         <div className=" flex gap-4">
-          <button className=" shadow-none">Sign in</button>
+          <button className=" shadow-none text-gray-500 ">Sign in</button>
           <button className="btn btn-secondary shadow-none rounded-4xl px-6">
             Sign Up
           </button>

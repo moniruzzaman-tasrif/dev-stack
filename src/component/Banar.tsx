@@ -11,7 +11,7 @@ const Banar = () => {
               Development Stack
             </span>{" "}
           </h1>
-          <p className="mt-8 max-w-125 p-3">
+          <p className="mt-8 max-w-125 p-3 text-gray-600">
             Explore frontend, backend, database, and tooling options, compare
             them side by side, and put together the stack that fits your next
             project.
@@ -21,7 +21,9 @@ const Banar = () => {
               {" "}
               Explore Technologies
             </button>
-            <button className="btn">Learn More</button>
+            <button className="btn px-12 bg-white text-gray-500">
+              Learn More
+            </button>
           </div>
         </div>
         <img src={BanarImg} alt="" />
