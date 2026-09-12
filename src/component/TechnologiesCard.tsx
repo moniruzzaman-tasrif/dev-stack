@@ -24,7 +24,7 @@ const TechnologiesCard = ({
   if(!Isverify){
       setTechItem([...tectItem, technologiesItem]);
       toast.success("Stack added", {
-        position: "bottom-center",
+        position: "bottom-right",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,

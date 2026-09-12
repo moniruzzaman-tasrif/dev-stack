@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ITechDatatype } from "./dataType";
 import { IoIosClose } from "react-icons/io";
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
 
 interface iTechtype {
   // techDataPromis: Promise<ITechDatatype[]>;
@@ -16,7 +16,7 @@ const Stack = ({ tectItem, setTechItem
     const removeItem = tectItem.filter(items => items.id !== item.id);
     setTechItem(removeItem);
     toast.error("Stack Deleted ", {
-      position: "bottom-center",
+      position: "bottom-right",
       autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: false,
@@ -33,9 +33,9 @@ const Stack = ({ tectItem, setTechItem
 
       setTechItem([]);
 
-   toast.error(" Delete Stack !", {
+   toast.error(" All Stack Delete!", {
      position: "bottom-right",
-     autoClose: 5000,
+     autoClose: 1000,
      hideProgressBar: false,
      closeOnClick: false,
      pauseOnHover: true,
@@ -88,7 +88,7 @@ const Stack = ({ tectItem, setTechItem
                           className=" text-4xl text-gray-500 cursor-pointer h hover:bg-[#f9711674] hover:rounded-3xl hover:text-white transition duration-100 ease-in "
                           onClick={() => hendelClick(item)}
                         />
-                        <ToastContainer />
+
                       </div>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const Stack = ({ tectItem, setTechItem
             onClick={handleRemoveAll}
           >
             {" "}
-            <ToastContainer />
+
             Remove All
           </button>
         )}
