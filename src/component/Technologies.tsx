@@ -35,7 +35,7 @@ const Technologies = ({
           <div className="col-span-9 grid grid-cols-3 gap-y-4  ">
             {dataTech.map(item => {
               return (
-                <div className="">
+                <div key={item.id} className="">
                   <TechnologiesCard
                     technologiesItem={item}
                     tectItem={tectItem}

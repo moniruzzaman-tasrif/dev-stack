@@ -58,7 +58,7 @@ const Stack = ({ tectItem, setTechItem
             tectItem.map(item => {
               return (
                 <div>
-                  <div className=" card bg-base-100 w-65 shadow-sm py-2 mt-4">
+                  <div key={item.id} className=" card bg-base-100 w-65 shadow-sm py-2 mt-4">
                     <div className="flex justify-between items-center px-2">
                       <div className="flex gap-4 items-center">
                         <img className="h-9" src={item.icon} alt="" />

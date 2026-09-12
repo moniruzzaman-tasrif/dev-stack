@@ -10,7 +10,7 @@ import type { ITechDatatype } from "./component/dataType";
 import Footer from "./component/footer";
 
 const dataPrimis = async (): Promise<ITechDatatype[]> => {
-  const res = await fetch("/public/technologies.json");
+  const res = await fetch("/technologies.json");
   const data = await res.json();
   return data;
 };
