@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase  text-[0.9rem]"> product</h1>
-            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem] ">
+            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem] capitalize">
               <li>
                 <a href="/">Home</a>
               </li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase  text-[0.9rem]">company</h1>
-            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem]">
+            <ul className=" text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem] capitalize">
               <li>
                 <a href="/">about</a>
               </li>
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2">
             <h1 className="font-bold uppercase text-[0.9rem]">legal</h1>
-            <ul className="text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem]">
+            <ul className="text-gray-500 flex flex-col gap-2 mt-4 text-[0.9rem] capitalize">
               <li>
                 <a href="/"> privacy policy</a>
               </li>
