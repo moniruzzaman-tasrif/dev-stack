@@ -44,7 +44,7 @@ const Stack = ({ tectItem, setTechItem
         theme: "light",
         transition: Bounce,
       });
-    
+
 
   };
   return (
@@ -63,7 +63,10 @@ const Stack = ({ tectItem, setTechItem
             tectItem.map(item => {
               return (
                 <div>
-                  <div key={item.id} className=" card bg-base-100 w-65 shadow-sm py-2 mt-4">
+                  <div
+                    key={item.id}
+                    className=" card bg-base-100 w-65 shadow-sm py-2 mt-4"
+                  >
                     <div className="flex justify-between items-center px-2">
                       <div className="flex gap-4 items-center">
                         <img className="h-9" src={item.icon} alt="" />
@@ -88,14 +91,18 @@ const Stack = ({ tectItem, setTechItem
             })
           )}
         </div>
-        <div
-          className={`btn mt-5 border-red-400 text-red-500 font-bold text-[1rem] bg-white `}
-          onClick={handleRemoveAll}
-        >
-          {" "}
-          <ToastContainer />
-          Remove All
-        </div>
+        {tectItem.length === 0 ? (
+          ""
+        ) : (
+          <div
+            className={`btn mt-5 border-red-400 text-red-500 font-bold text-[1rem] bg-white `}
+            onClick={handleRemoveAll}
+          >
+            {" "}
+            <ToastContainer />
+            Remove All
+          </div>
+        )}
       </div>
     </div>
   );
