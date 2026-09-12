@@ -23,7 +23,7 @@ const TechnologiesCard = ({
   const hendelClick = () => {
   if(!Isverify){
       setTechItem([...tectItem, technologiesItem]);
-      toast.success("🦄 Wow so easy!", {
+      toast.success("Stack added", {
         position: "bottom-center",
         autoClose: 1000,
         hideProgressBar: false,
