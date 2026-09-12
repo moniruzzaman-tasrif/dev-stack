@@ -27,9 +27,12 @@ const Stack = ({ tectItem, setTechItem
       transition: Bounce,
     });
   };
-  console.log(tectItem.length);
+
   const handleRemoveAll = () => {
-    setTechItem([]);
+
+
+      setTechItem([]);
+
       toast.error(" All Stack Deleted ", {
         position: "bottom-center",
         autoClose: 1000,
@@ -41,6 +44,8 @@ const Stack = ({ tectItem, setTechItem
         theme: "light",
         transition: Bounce,
       });
+    
+
   };
   return (
     <div>
