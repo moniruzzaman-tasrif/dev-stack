@@ -24,12 +24,9 @@ function App() {
     <>
       <Suspense
         fallback={
-          <div>
-            {" "}
-            <video autoPlay loop width="100%">
-              <source src={myVideo} type="video/mp4" />
-            </video>
-          </div>
+
+       <h1 className="text-4xl text-center"> Loding.....</h1>
+
         }
       >
         <Nav></Nav>
