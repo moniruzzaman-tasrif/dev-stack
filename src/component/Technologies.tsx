@@ -18,8 +18,8 @@ const Technologies = ({
   console.log(dataTech);
   return (
     <div>
-      <div className="max-w-300 mx-auto">
-        <div className="">
+      <div className="max-w-300 mx-auto md:px-0 px-5">
+        <div className="lg:text-left text-center">
           <h1 className="text-4xl font-bold ">
             Explore the{" "}
             <span className="bg-linear-to-r from-[#FD5426] to-[#EC4995] bg-clip-text text-transparent">
@@ -31,8 +31,8 @@ const Technologies = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-12 mt-15">
-          <div className="col-span-9 grid grid-cols-3 gap-y-4  ">
+        <div className="grid grid-cols-1 md:grid-cols-12  gap-4 mt-15 ">
+          <div className="  lg:col-span-9  md:col-span-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-y-4  ">
             {dataTech.map(item => {
               return (
                 <div key={item.id} className="">
@@ -45,7 +45,7 @@ const Technologies = ({
               );
             })}
           </div>
-          <div className=" col-span-3">
+          <div className="  md:col-span-3">
             <Stack tectItem={tectItem} setTechItem={setTechItem}></Stack>
           </div>
         </div>

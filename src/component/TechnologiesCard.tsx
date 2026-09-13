@@ -42,7 +42,7 @@ const TechnologiesCard = ({
   return (
     <div>
       {
-        <div className=" card bg-base-100 w-70 shadow-sm p-4 flex gap-4 ">
+        <div className=" card bg-base-100 xl:w-70 lg:w-65 md:w-60 w-full shadow-sm p-4 flex gap-4 ">
           <div className="flex justify-between items-center ">
             <img
               className="h-10"

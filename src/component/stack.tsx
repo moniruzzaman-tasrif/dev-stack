@@ -47,8 +47,8 @@ const Stack = ({ tectItem, setTechItem
 
   };
   return (
-    <div>
-      <div className="card bg-base-100 w-75 shadow-sm p-5">
+    <div className="md:w-0 md:mt-0 mt-7">
+      <div className="card bg-base-100    lg:w-70 md:w-60 w-full shadow-sm p-5">
         <div className="">
           <h1 className="capitalize font-bold text-2xl">your card</h1>
           <p className=" text-gray-500 capitalize">
@@ -68,7 +68,7 @@ const Stack = ({ tectItem, setTechItem
                 <div>
                   <div
                     key={item.id}
-                    className=" card bg-base-100 w-65 shadow-sm py-2 mt-4"
+                    className=" card bg-base-100 w-full shadow-sm py-2 mt-4"
                   >
                     <div className="flex justify-between w-full items-center px-2">
                       <div className="flex gap-4 items-center justify-between">
