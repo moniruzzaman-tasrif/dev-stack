@@ -3,7 +3,7 @@ import LogoImg from "../assets/logo-text.png"
 const Footer = () => {
   return (
     <div>
-      <div className=" max-w-300 mx-auto mt-25 px-5 md:px-0">
+      <div className=" max-w-300 mx-auto mt-25 px-5 lg:px-0">
         <div className=" grid md:grid-cols-12  gap-4">
           <div className="col-span-5 md:block flex flex-col justify-center items-center ">
             <img src={LogoImg} className="" alt="" />
@@ -58,11 +58,11 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className=" flex justify-between items-center mt-8 py-5">
+        <div className=" text-center md:flex justify-between items-center mt-8 py-5">
           <span className="text-gray-500 text-[0.9rem]">
             © 2026 Dev Stack. All rights reserved.
           </span>
-          <div className=" text-gray-500 flex gap-3  text-[0.9rem]">
+          <div className=" text-gray-500 flex gap-3 justify-center mt-2  text-[0.9rem] ">
             <span>Privacy</span>
             <span>Terms</span>
           </div>
