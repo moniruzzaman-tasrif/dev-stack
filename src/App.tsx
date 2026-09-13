@@ -9,6 +9,7 @@ import type { ITechDatatype } from "./component/dataType";
 import Footer from "./component/footer";
 import { ToastContainer } from "react-toastify";
 
+
 const dataPrimis = async (): Promise<ITechDatatype[]> => {
   const res = await fetch("/technologies.json");
   const data = await res.json();
@@ -25,6 +26,7 @@ function App() {
       <Suspense
         fallback={<h1 className="text-4xl text-center"> Loding.....</h1>}
       >
+
         <Nav></Nav>
         <Banar></Banar>
         <Technologies

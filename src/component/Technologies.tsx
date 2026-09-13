@@ -17,7 +17,7 @@ const Technologies = ({
   const dataTech = use(techDataPromis);
   console.log(dataTech);
   return (
-    <div>
+    <div id="Technologies">
       <div className="max-w-300 mx-auto md:px-0 px-5">
         <div className="lg:text-left text-center">
           <h1 className="text-4xl font-bold ">

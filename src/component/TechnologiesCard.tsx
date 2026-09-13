@@ -40,7 +40,7 @@ const TechnologiesCard = ({
   };
 
   return (
-    <div>
+    <div id="Projects">
       {
         <div className=" card bg-base-100 xl:w-70 lg:w-65 md:w-60 w-full shadow-sm p-4 flex gap-4 ">
           <div className="flex justify-between items-center ">
@@ -80,7 +80,6 @@ const TechnologiesCard = ({
             disabled={Isverify}
             className={`btn btn-neutral disabled:border-2 disabled:border-red-300 disabled:text-[#EC4993] `}
           >
-
             {Isverify === true ? "Added to Stack" : "Add to Stack"}
           </button>
         </div>

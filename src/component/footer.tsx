@@ -2,7 +2,7 @@
 import LogoImg from "../assets/logo-text.png"
 const Footer = () => {
   return (
-    <div>
+    <div id="Contact">
       <div className=" max-w-300 mx-auto mt-25 px-5 lg:px-0">
         <div className=" grid md:grid-cols-12  gap-4">
           <div className="col-span-5 md:block flex flex-col justify-center items-center ">
@@ -25,10 +25,10 @@ const Footer = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/">Technologies</a>
+                <a href="#Technologies">Technologies</a>
               </li>
               <li>
-                <a href="/">Project</a>
+                <a href="#Projects">Project</a>
               </li>
             </ul>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
                 <a href="/">about</a>
               </li>
               <li>
-                <a href="/">contact</a>
+                <a href="#Contact">contact</a>
               </li>
               <li>
                 <a href="/">careers</a>
