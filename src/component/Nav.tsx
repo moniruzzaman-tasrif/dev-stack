@@ -5,15 +5,18 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const Nav = () => {
-  const [open,setOpne]=useState<boolean>(false)
+  const [open,setOpen]=useState<boolean>(false)
 
   const handelClick=()=>{
-    setOpne(!open)
+    setOpen(!open);
   }
+
   return (
     <div className="">
-      <div className="border border-gray-300 px-5 lg-px-0">
-        <div className=" flex justify-between items-center max-w-300 mx-auto md:px-0  py-4">
+      <div
+        className={`border border-gray-300 px-5 ${open && "z-30 fixed bg-white inset-0"}`}
+      >
+        <div className=" flex justify-between items-center max-w-300 mx-auto md:px-0    py-4">
           <button onClick={handelClick} className="cursor-pointer lg:hidden">
             {open ? (
               <IoMdClose className="text-2xl lg:hidden hover:bg-[#F43098]" />
@@ -50,7 +53,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      {open && <NavList></NavList>}
+      {open && <NavList setOpen={setOpen} open={open}></NavList>}
     </div>
   );
 };
