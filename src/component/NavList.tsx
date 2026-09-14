@@ -12,7 +12,7 @@ const NavList = ({ setOpen, open }: TypeNavList) => {
   };
   return (
     <div
-      className={`fixed inset-0 top-[15%] bg-white z-40 flex flex-col justify-between p-8 transition-all duration-300 ease-in-out lg:hidden ${
+      className={`fixed inset-0 top-[12%] md:top-[16%] bg-white z-40 flex flex-col justify-between p-8 transition-all duration-300 ease-in-out lg:hidden ${
         open
           ? "opacity-100 pointer-events-auto translate-y-0"
           : "opacity-0 pointer-events-none -translate-y-4"

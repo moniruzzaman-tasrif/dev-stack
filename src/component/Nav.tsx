@@ -14,7 +14,7 @@ const Nav = () => {
   return (
     <div className="">
       <div
-        className={`border border-gray-300 px-5 ${open && "z-30 fixed bg-white inset-0"}`}
+        className={`border-b border-gray-300 px-5 fixed inset-0 bg-white h-15 md:h-20 z-30 `}
       >
         <div className=" flex justify-between items-center max-w-300 mx-auto md:px-0    py-4">
           <button onClick={handelClick} className="cursor-pointer lg:hidden">
